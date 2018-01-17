@@ -12,9 +12,31 @@ console.log(add(55, 1, 1001));
 const user = {
     name: 'Andrew',
     cities: ['Philadelphia', 'New York', 'Dublin'],
+    //arrow fuction doesn't work this goes to global scope
+    // printPlacesLived: function() {
+
+    //     //or
+    //     // this.cities.forEach((city) => {
+    //     //     console.log(this.name + 'has lived in ' + city)
+    //     // });
+
+    //     return this.cities.map((city) => this.name + ' has lived in ' + city);
+    // }
+
     printPlacesLived() {
+        // const that = this;
+        // this.cities.forEach(function (city) {
+        //     console.log(that.name + 'has lived in ' + city)
+        // });
+
+        //or
+        // this.cities.forEach((city) => {
+        //     console.log(this.name + 'has lived in ' + city)
+        // });
+
         return this.cities.map((city) => this.name + ' has lived in ' + city);
     }
+    
 };
 console.log(user.printPlacesLived());
 
